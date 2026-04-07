@@ -23,30 +23,25 @@ updateCarousel();
 // Auto rotate every 2.5 seconds
 setInterval(rotateCarousel, 2500);
 
+//Cart code
+
 let cart = [];
 
-function addToCart(productName,price)
-{
-   //Add the item to our cart array
-   cart.push({name: productName, price:price}); 
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+const cartCount = document.getElementById("cart-count");
 
-   //Calculate  the totalusing a loop (The math)
-   let total = 0;
-   cart.forEach(item=>{
-    total += item.price;
-   });
+function addToCart(productName, price){
+    cart.push({name : productName, price : Number(price)});
 
-   //Update the ui : show the count and the total money
-   document.getElementById('cart-count').innerText = cart.length;
+    let currentTotal = 0;
+    cart.forEach(item => {
+        currentTotal += item.price;
+    });
 
-   //If you have a cart total span updat here
+    document.getElementById('cart-count').innerText= cart.length;
 
-   if(document.getElementById('cart-total')){
-    document.getElementById('cart-total').innerText = currentTotal;
-   }
-   
-   //update the ui(we'll alert for now, but see step 3)
-   //alert(`${productName} added! Total items:${cart.length} | Total : Ksh ${total}`);
-
-   console.log("New Total : Ksh", + currentTotal);
-}
+    const totalElement = document.getElementById('cart-total');
+    if (totalElement) {
+        totalElement.innerText = currentTotal;
+    }
+    }
