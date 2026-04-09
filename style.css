@@ -12,6 +12,8 @@ h1{
 }
 h2{
     color: #D2B28C;
+    margin-top: 100px;
+    
 }
 p{
     color: #5a4633;
@@ -46,7 +48,7 @@ ul{
 
 }
 
-button{
+button .addToCart{
     background-color: #c19a6b;
     color: white;
     padding: 10px;
@@ -103,13 +105,14 @@ button{
 .hero h1{
     font-size: 42px;
     color: #C19a6b;
-    margin-bottom: 10px;
+    margin-top: 2.5px;
 
 }
 
 .hero p{
     font-size: 18px;
     color: #7a5c3e;
+    margin-top: 5px;
 
 }
 
@@ -120,6 +123,7 @@ button{
 .carousel-section{
    padding: 60px 20px;
    text-align: center;
+  
 }
 
 /* The moving row that holds all carousel items */
@@ -135,6 +139,7 @@ button{
     height: 450px;
     margin: 0 auto;
     overflow: hidden;
+    
 }
 
 .circle-card{

@@ -38,7 +38,7 @@
                 <h3>Classic Milk Tea</h3>
                 <p>Creamy, sweet and refreshing</p>
                 <span class="price">Ksh 500</span>
-                <button class="add-to-cart" onclick="add-to-cart('classic Milk tea', 500)">Add to cart</button>
+                <button class="add-to-cart" onclick="addToCart('classic Milk tea', 500)">Add to cart</button>
             </div>
         </div>
 
@@ -48,7 +48,7 @@
                 <h3>Juicy Burger</h3>
                 <p>Grilled fresh and full of flavour</p>
                 <span class="price">Ksh 500</span>
-                <button class="add-to-cart" onclick="add-to-cart('Juicy burger', 500)">Add to cart</button>
+                <button class="add-to-cart" onclick="addToCart('Juicy burger', 500)">Add to cart</button>
             </div>
         </div>
 
@@ -59,7 +59,7 @@
                 <h3>Cheese cake</h3>
                 <p>Soft, rich and perfect after a meal 😛</p>
                 <span class="price">Ksh 300</span>
-                <button class="add-to-cart" onclick="add-to-cart('Cheese cake', 300)">Add to cart</button>
+                <button class="add-to-cart" onclick="addToCart('Cheese cake', 300)">Add to cart</button>
             </div>
         </div>
 
@@ -154,6 +154,20 @@
     </p>
 
 </section>
+
+<div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2>🛍️ Your Order</h2>
+            <hr>
+            <ul id="cart-items" class="cart-list"></ul> 
+            
+            <div class="modal-footer">
+                <h3>Total: Ksh <span id="cart-total-popup">0</span></h3>
+                <button class="checkout-btn">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
 
 <script src="script.js"></script>
 </body>
